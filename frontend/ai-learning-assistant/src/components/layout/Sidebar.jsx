@@ -46,17 +46,17 @@ const Sidebar = ({isSidebarOpen,toggleSidebar}) => {
         </div>
 
         <nav className="flex-1 px-3 py-6 space-y-1.5">
-            {navLinks.map((link)=>{
+            {navLinks.map((link)=>(
                 <NavLink 
                     key={link.to}
                     to={link.to}
                     onClick={toggleSidebar}
-                    className={({isActive})=>{
+                    className={({isActive})=>
                         `group flex items-center gap-3 px-4 py-2.5 text-sm font-semibold rounded-xl transition-all duration-200 ${
                             isActive ? 'bg-linear-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25':
                             'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
                         }`
-                    }}
+                    }
                 >
                     {({isActive})=>(
                         <>
@@ -69,7 +69,7 @@ const Sidebar = ({isSidebarOpen,toggleSidebar}) => {
                         </>
                     )}
                 </NavLink>
-            })}
+            ))}
         </nav>
 
         <div className="px-3 py-4 border-t border-slate-200/60">

@@ -81,7 +81,7 @@ export const chunkText=(text,chunkSize=500,overlap=50)=>{
     //Add the last chunk
     if(currentChunk.length>0){
         chunks.push({
-            content:currentChunk.json('\n\n'),
+            content:currentChunk.join('\n\n'),
             chunkIndex:chunkIndex,
             pageNumber:0
         })

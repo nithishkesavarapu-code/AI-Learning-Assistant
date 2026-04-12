@@ -1,11 +1,11 @@
-import React,{Children, useState} from 'react'
+import React, { useState } from 'react'
 import Sidebar from './Sidebar';
 import Header from './Header'
 
-const AppLayout = () => {
-  const {isSidebarOpen, setIsSidebarOpen} = useState(false);
+const AppLayout = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar=()=>{
+  const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   }
 
