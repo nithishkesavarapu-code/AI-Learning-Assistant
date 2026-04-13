@@ -45,6 +45,10 @@ const documentSchema = new mongoose.Schema({
         type:Date,
         default:Date.now
     },
+    lastAccessed:{
+        type:Date,
+        default:Date.now
+    },
     status:{
         type: String,
         enum: ['processing','ready','failed'],

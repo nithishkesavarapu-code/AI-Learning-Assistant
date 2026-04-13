@@ -155,12 +155,12 @@ const DashboardPage = () => {
                           : 'bg-linear-to-r from-emerald-400 to-teal-500'
                       }`} />
                       <p className="text-sm font-medium text-slate-900 truncate">
-                        {activity.type === 'document' ? 'Accessed Document' : 'Attempted Quiz: '}
+                        {activity.type === 'document' ? 'Accessed Document: ' : 'Attempted Quiz: '}
                         <span className="text-slate-700">{activity.description}</span>
                       </p>
                     </div>
                     <p className="text-xs text-slate-500 pl-4">
-                      {new Date(activity.timestamp).toLocaleString()}
+                      {activity.timestamp ? new Date(activity.timestamp).toLocaleString() : 'Recent'}
                     </p>
                   </div>
 
