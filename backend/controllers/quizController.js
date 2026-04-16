@@ -65,7 +65,7 @@ export const submitQuiz = async(req,res,next)=>{
             })
         }
 
-        const quiz = await Quiz.find({
+        const quiz = await Quiz.findOne({
             _id:req.params.id,
             userId:req.user._id
         })
@@ -94,10 +94,10 @@ export const submitQuiz = async(req,res,next)=>{
             const {questionIndex,selectedAnswer}=answer;
 
             if(questionIndex<quiz.questions.length){
-                const question=quiz.questions(questionIndex);
+                const question=quiz.questions[questionIndex];
                 const isCorrect=selectedAnswer===question.correctAnswer;
 
-                if(!isCorrect) correctCount++;
+                if(isCorrect) correctCount++;
 
                 userAnswers.push({
                     questionIndex,
