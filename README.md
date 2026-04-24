@@ -153,6 +153,25 @@ AI-Learning-Assistant/
 
 ---
 
+## 🚀 Deployment
+
+### Backend Deployment
+1.  Set the following environment variables on your server:
+    *   `MONGODB_URI`: Your production MongoDB connection string.
+    *   `JWT_SECRET`: A long, random string for JWT signing.
+    *   `GEMINI_API_KEY`: Your Google Gemini API key.
+    *   `APP_URL`: The URL of your deployed backend (e.g., `https://api.myapp.com`).
+    *   `FRONTEND_URL`: The URL of your deployed frontend (e.g., `https://myapp.com`).
+2.  Run `npm start` to launch the server.
+
+### Frontend Deployment
+1.  Set the following environment variable in your build environment:
+    *   `VITE_API_URL`: The URL of your deployed backend.
+2.  Run `npm run build` to generate the production bundle.
+3.  Deploy the contents of the `dist/` folder to your static hosting provider (e.g., Vercel, Netlify).
+
+---
+
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
